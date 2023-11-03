@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:medicapp/core/utls/app_router.dart';
 
 import 'package:medicapp/core/utls/assets.dart';
 import 'package:medicapp/core/utls/colors.dart';
@@ -68,6 +70,9 @@ class WelcomViewBody extends StatelessWidget {
                 text: 'Log in',
                 color: ColorData.kPrimaryColor,
                 textColor: Colors.white,
+                onTap: (){
+                  GoRouter.of(context).push(AppRouter.kLoginView);
+                },
               ),
               CustomTextButton(
                 text: 'Sign in',

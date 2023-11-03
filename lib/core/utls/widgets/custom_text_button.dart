@@ -3,23 +3,24 @@ import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/styles.dart';
 
 class CustomTextButton extends StatelessWidget {
-  const CustomTextButton(
-      {super.key,
-      required this.text,
-      required this.textColor,
-      required this.color});
+  const CustomTextButton({
+    super.key,
+    required this.text,
+    required this.textColor,
+    required this.color,
+    this.onTap,
+  });
 
   final String text;
-  final Color textColor ;
-  final Color color ;
+  final Color textColor;
+  final Color color;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
-      
-        
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: ColorData.kPrimaryColor,

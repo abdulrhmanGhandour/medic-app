@@ -78,6 +78,9 @@ class WelcomViewBody extends StatelessWidget {
                 text: 'Sign in',
                 color: ColorData.kPrimaryColor,
                 textColor: Colors.white,
+                 onTap: (){
+                  GoRouter.of(context).push(AppRouter.kSingUpView);
+                },
               ),
             ],
           ),

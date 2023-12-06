@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medicapp/core/utls/app_router.dart';
-
 import 'package:medicapp/core/utls/assets.dart';
 import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/styles.dart';
@@ -22,10 +21,11 @@ class WelcomViewBody extends StatelessWidget {
             child: TextButton(
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NavBarRoots(),
-                    ));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const NavBarRoots(),
+                  ),
+                );
               },
               child: Text(
                 'Skip',
@@ -70,7 +70,7 @@ class WelcomViewBody extends StatelessWidget {
                 text: 'Log in',
                 color: ColorData.kPrimaryColor,
                 textColor: Colors.white,
-                onTap: (){
+                onTap: () {
                   GoRouter.of(context).push(AppRouter.kLoginView);
                 },
               ),
@@ -78,12 +78,33 @@ class WelcomViewBody extends StatelessWidget {
                 text: 'Sign in',
                 color: ColorData.kPrimaryColor,
                 textColor: Colors.white,
-                 onTap: (){
+                onTap: () {
                   GoRouter.of(context).push(AppRouter.kSingUpView);
                 },
               ),
             ],
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Are you Admin?',
+                style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  'login',
+                  style: Styles.textStyle16.copyWith(
+                    color: ColorData.kPrimaryColor,
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

@@ -7,6 +7,7 @@ class CustomAppBar extends StatelessWidget {
 
   final String image;
   final String text;
+ //final bool isEmpity; 
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustomAppBar extends StatelessWidget {
           const Spacer(),
           CircleAvatar(
             radius: 25,
-            backgroundImage: AssetImage(image),
+            backgroundImage:   AssetImage(image),
           ),
         ],
       ),

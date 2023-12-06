@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/styles.dart';
-import 'package:medicapp/features/home/presanteion/view/home_view.dart';
+import 'package:medicapp/features/clinics/presanteion/view/clinics_view.dart';
 import 'package:medicapp/features/schedule/presanteion/view/schedule_view.dart';
+import 'package:medicapp/features/settings/presanteion/view/settings_view.dart';
 
 class NavBarRoots extends StatefulWidget {
   const NavBarRoots({super.key});
@@ -15,7 +16,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _views = [
     //home view
-    const HomeView(),
+    const ClinicsView(),
 
     //Schedule view
     const ScheduleView(),
@@ -24,7 +25,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
     Container(),
 
     //setting view
-    Container(),
+    const SettingsView(),
   ];
 
   @override

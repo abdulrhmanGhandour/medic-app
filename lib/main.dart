@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:google_fonts/google_fonts.dart';
 import 'package:medicapp/core/utls/app_router.dart';
 
 void main() {
@@ -11,11 +12,11 @@ class MedicApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData.light(),
-       routerConfig: AppRouter.router,
-       debugShowCheckedModeBanner: false,
+      theme: ThemeData.light().copyWith(
+   //  textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+      ),
+      routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
     );
   }
-} 
-  
-       
+}

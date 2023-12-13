@@ -8,7 +8,9 @@ class DoctorSingUpView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        body: DoctorSingUpViewBody(),
+        body: SingleChildScrollView(
+          child: DoctorSingUpViewBody(),
+        ),
       ),
     );
   }

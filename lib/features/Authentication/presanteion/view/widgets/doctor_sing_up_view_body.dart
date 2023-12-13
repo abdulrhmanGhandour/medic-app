@@ -18,7 +18,7 @@ class DoctorSingUpViewBody extends StatelessWidget {
       child: Column(
         children: [
           Image.asset(
-            AssetsData.kDoctorsImage,
+            AssetsData.kDoctorAut,
           ),
           const SizedBox(
             height: 30,
@@ -48,14 +48,15 @@ class DoctorSingUpViewBody extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          const CustomTextButton(
+           CustomTextButton(
             text: 'Sing up',
             textColor: Colors.white,
-            color: ColorData.kPrimaryColor,
+            color: ColorData.kSecndoryColor,
           ),
           CustomQuestionWidget(
             text: 'Already have account?',
             text2: 'Login',
+            textColor: ColorData.kSecndoryColor,
             onPressed: () {
               GoRouter.of(context).push(AppRouter.kDoctorLoginView);
             },

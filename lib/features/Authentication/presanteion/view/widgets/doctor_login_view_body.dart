@@ -48,7 +48,7 @@ class DoctorLoginViewBody extends StatelessWidget {
               text2: 'Create Account',
               textColor:ColorData.kSecndoryColor,
               onPressed: () {
-                 GoRouter.of(context).push(AppRouter.kSingUpView);
+                 GoRouter.of(context).push(AppRouter.kDoctorSingUpView);
               },
             ),
           ],

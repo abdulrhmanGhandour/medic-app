@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medicapp/core/utls/styles.dart';
+import 'package:medicapp/core/utls/assets.dart';
+import 'package:medicapp/core/utls/widgets/custom_app_bar.dart';
 import 'package:medicapp/features/clinics/data/clinics_model.dart';
 import 'package:medicapp/features/clinics/presanteion/view/widgets/clinic_item.dart';
 
@@ -9,21 +10,20 @@ class ClinicsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 18.0),
-              child: Text(
-                'Choose your clinic',
-                style: Styles.textStyle20.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const CustomAppBar(
+            image: AssetsData.kDoctor1Image,
+            text: 'Choose your clinic',
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              left: 20,
+              right: 20,
+              bottom: 20,
             ),
-            GridView.builder(
+            child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,
@@ -38,8 +38,8 @@ class ClinicsViewBody extends StatelessWidget {
                 );
               },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

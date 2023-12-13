@@ -49,8 +49,8 @@ class _NavBarRootsState extends State<NavBarRoots> {
           },
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_filled),
-              label: 'Home',
+              icon: Icon(Icons.medical_services),
+              label: 'Clincs',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.calendar_month),

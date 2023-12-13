@@ -17,12 +17,12 @@ class CustomAppBar extends StatelessWidget {
         children: [
            Text(
             text,
-            style: Styles.textStyle35,
+            style: Styles.textStyle30,
           ),
           const Spacer(),
           CircleAvatar(
             radius: 25,
-            backgroundImage:   AssetImage(image),
+            backgroundImage:  AssetImage(image),
           ),
         ],
       ),

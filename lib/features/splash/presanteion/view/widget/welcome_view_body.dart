@@ -46,7 +46,7 @@ class WelcomViewBody extends StatelessWidget {
           ),
           Text(
             'Doctors Appointment',
-            style: Styles.textStyle35.copyWith(
+            style: Styles.textStyle30.copyWith(
               color: ColorData.kPrimaryColor,
             ),
           ),
@@ -91,11 +91,13 @@ class WelcomViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Are you Admin?',
+                'Are you Doctor?',
                 style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  
+                },
                 child: Text(
                   'login',
                   style: Styles.textStyle16.copyWith(

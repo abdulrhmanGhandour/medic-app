@@ -32,7 +32,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _views[_selectedIndex],
-      bottomNavigationBar: Container(
+      bottomNavigationBar:Container(
         height: 80,
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,

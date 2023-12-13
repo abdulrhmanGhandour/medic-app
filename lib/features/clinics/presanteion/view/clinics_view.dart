@@ -6,8 +6,10 @@ class ClinicsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ClinicsViewBody(),
+    return const SafeArea(
+      child:  Scaffold(
+        body: ClinicsViewBody(),
+      ),
     );
   }
 }

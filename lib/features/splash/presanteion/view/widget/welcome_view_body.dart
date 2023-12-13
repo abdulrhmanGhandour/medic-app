@@ -96,7 +96,7 @@ class WelcomViewBody extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  
+                   GoRouter.of(context).push(AppRouter.kDoctorLoginView);
                 },
                 child: Text(
                   'login',

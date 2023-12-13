@@ -3,15 +3,18 @@ import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/styles.dart';
 
 class CustomQuestionWidget extends StatelessWidget {
-  const CustomQuestionWidget(
-      {super.key,
-      required this.text,
-      required this.text2,
-       this.onPressed});
+  const CustomQuestionWidget({
+    super.key,
+    required this.text,
+    required this.text2,
+    this.onPressed,
+    this.textColor = ColorData.kPrimaryColor,
+  });
 
   final String text;
   final String text2;
   final Function()? onPressed;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +30,7 @@ class CustomQuestionWidget extends StatelessWidget {
           child: Text(
             text2,
             style: Styles.textStyle16.copyWith(
-              color: ColorData.kPrimaryColor,
+              color: textColor,
             ),
           ),
         ),

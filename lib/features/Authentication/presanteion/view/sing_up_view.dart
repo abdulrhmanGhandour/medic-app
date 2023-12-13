@@ -9,11 +9,7 @@ class SingUpView extends StatelessWidget {
     return const SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              SingUpViewBody(),
-            ],
-          ),
+          child: SingUpViewBody(),
         ),
       ),
     );

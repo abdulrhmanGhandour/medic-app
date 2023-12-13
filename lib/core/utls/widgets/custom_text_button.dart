@@ -7,7 +7,7 @@ class CustomTextButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.textColor,
-    required this.color,
+    this.color = ColorData.kPrimaryColor,
     this.onTap,
   });
 
@@ -23,7 +23,7 @@ class CustomTextButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: ColorData.kPrimaryColor,
+          color: color,
         ),
         child: Center(
           child: Padding(

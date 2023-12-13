@@ -15,5 +15,10 @@ class AssetsData {
   static const kObstetricsGynecologyClinic = 'assets/image/Obstetrics and Gynecology Clinic.jpeg';
   static const kOphthalmologyClinic = 'assets/image/Ophthalmology clinic.jpeg';
   static const kOrthopedicClinic = 'assets/image/Orthopedic clinic.jpeg';
+  static const kDoctorAut = 'assets/image/DoctorAut4.png';
+  
+  
+  
+
   
 }

@@ -48,10 +48,13 @@ class SingUpViewBody extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          CustomTextButton(
+          const CustomTextButton(
             text: 'Sing up',
             textColor: Colors.white,
             color: ColorData.kPrimaryColor,
+          ),
+          const SizedBox(
+            height: 16,
           ),
           CustomQuestionWidget(
             text: 'Already have account?',

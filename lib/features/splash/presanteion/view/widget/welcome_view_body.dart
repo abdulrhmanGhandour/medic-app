@@ -63,7 +63,7 @@ class WelcomViewBody extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CustomTextButton(
@@ -74,18 +74,11 @@ class WelcomViewBody extends StatelessWidget {
                   GoRouter.of(context).push(AppRouter.kLoginView);
                 },
               ),
-              CustomTextButton(
-                text: 'Sign in',
-                color: ColorData.kPrimaryColor,
-                textColor: Colors.white,
-                onTap: () {
-                  GoRouter.of(context).push(AppRouter.kSingUpView);
-                },
-              ),
+             
             ],
           ),
           const SizedBox(
-            height: 20,
+            height: 8,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

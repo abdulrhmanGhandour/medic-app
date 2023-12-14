@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "602895041528",
+    "project_id": "appointment-app-8d4dd",
+    "storage_bucket": "appointment-app-8d4dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602895041528:android:af898156cc46c899694c0d",
+        "android_client_info": {
+          "package_name": "com.example.medicapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvEeNa6rEIsOgIDQ-FqkTOVhHWc1EHIO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

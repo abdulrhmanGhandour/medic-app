@@ -53,6 +53,9 @@ class DoctorSingUpViewBody extends StatelessWidget {
             textColor: Colors.white,
             color: ColorData.kSecndoryColor,
           ),
+           const SizedBox(
+            height: 20,
+          ),
           CustomQuestionWidget(
             text: 'Already have account?',
             text2: 'Login',

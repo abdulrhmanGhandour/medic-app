@@ -39,11 +39,9 @@ class BookAppoinmentSection extends StatelessWidget {
             const SizedBox(
               height: 14,
             ),
-           const  CustomTextButton(
+            const CustomTextButton(
               text: 'Book Appointment',
               color: ColorData.kPrimaryColor,
-            
-            
             ),
           ],
         ),

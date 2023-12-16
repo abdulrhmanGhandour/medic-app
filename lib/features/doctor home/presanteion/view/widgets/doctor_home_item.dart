@@ -19,7 +19,8 @@ class DoctorHomeViewItem extends StatelessWidget {
         alignment: Alignment.bottomLeft,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * .18,
+            height: MediaQuery.of(context).size.height * .23,
+            width: MediaQuery.of(context).size.height * .22,
             clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
@@ -28,7 +29,7 @@ class DoctorHomeViewItem extends StatelessWidget {
             child: Image(
               image:  AssetImage(image),
               fit: BoxFit.cover,
-              colorBlendMode: BlendMode.screen,
+              colorBlendMode: BlendMode.color,
               color: ColorData.kSecndoryColor,
             ),
           ),

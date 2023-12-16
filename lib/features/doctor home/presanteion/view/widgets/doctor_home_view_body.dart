@@ -20,19 +20,18 @@ class DoctorHomeViewBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 DoctorHomeViewItem(
                   image: AssetsData.kDoctorAut,
                   text: 'Profile',
                   onTap: () {
                     GoRouter.of(context).push(
-                      AppRouter.kHomeView,
+                      AppRouter.kDoctorProfileView,
                     );
                   },
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
+              
                 const DoctorHomeViewItem(
                   image: AssetsData.kDoctorSchedule,
                   text: 'Schedule',

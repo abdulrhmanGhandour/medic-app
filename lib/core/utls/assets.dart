@@ -20,6 +20,6 @@ class AssetsData {
   static const kDoctorAut = 'assets/image/DoctorAut4.png';
   static const kDoctorLogo = 'assets/image/doctor.png';
   static const kUserLogo = 'assets/image/team.png';
-  static const kDoctorSchedule = ' assets/image/doctorAut.jpg';
+  static const kDoctorSchedule = 'assets/image/3911465.jpg';
  
 }

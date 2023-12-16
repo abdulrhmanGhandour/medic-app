@@ -50,7 +50,7 @@ class DoctorSingUpViewBody extends StatelessWidget {
           ),
            CustomTextButton(
             text: 'Sing up',
-            textColor: Colors.white,
+           
             color: ColorData.kSecndoryColor,
           ),
            const SizedBox(

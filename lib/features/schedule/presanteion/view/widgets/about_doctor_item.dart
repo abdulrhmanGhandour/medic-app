@@ -68,7 +68,7 @@ class AboutDoctorItem extends StatelessWidget {
                         const SizedBox(
                           width: 14,
                         ),
-                        AppoinmentAction(
+                       const AppoinmentAction(
                           text: 'Reschedule',
                           color: ColorData.kPrimaryColor,
                           textColor: Colors.white,

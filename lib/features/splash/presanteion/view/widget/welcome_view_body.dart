@@ -69,7 +69,7 @@ class WelcomViewBody extends StatelessWidget {
               CustomTextButton(
                 text: 'Log in',
                 color: ColorData.kPrimaryColor,
-                textColor: Colors.white,
+  
                 onTap: () {
                   GoRouter.of(context).push(AppRouter.kLoginView);
                 },

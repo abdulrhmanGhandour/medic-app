@@ -6,13 +6,13 @@ class CustomTextButton extends StatelessWidget {
   const CustomTextButton({
     super.key,
     required this.text,
-    required this.textColor,
+    
     this.color = ColorData.kPrimaryColor,
     this.onTap,
   });
 
   final String text;
-  final Color textColor;
+  
   final Color color;
   final Function()? onTap;
 

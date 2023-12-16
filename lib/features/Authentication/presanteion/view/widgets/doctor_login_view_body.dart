@@ -37,7 +37,7 @@ class DoctorLoginViewBody extends StatelessWidget {
             ),
             CustomTextButton(
               text: 'Login',
-              textColor: Colors.white,
+           
               color: ColorData.kSecndoryColor,
               onTap: () {
                  GoRouter.of(context).push(AppRouter.kDoctorHomeView);

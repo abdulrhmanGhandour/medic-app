@@ -35,9 +35,9 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            CustomTextButton(
+          const  CustomTextButton(
               text: 'Login',
-              textColor: Colors.white,
+             
               color: ColorData.kPrimaryColor,
             ),
              CustomQuestionWidget(

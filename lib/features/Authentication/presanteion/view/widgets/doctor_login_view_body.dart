@@ -40,7 +40,7 @@ class DoctorLoginViewBody extends StatelessWidget {
               textColor: Colors.white,
               color: ColorData.kSecndoryColor,
               onTap: () {
-                 GoRouter.of(context).push(AppRouter.kDoctorSingUpView);
+                 GoRouter.of(context).push(AppRouter.kDoctorHomeView);
               },
             ),
             const SizedBox(

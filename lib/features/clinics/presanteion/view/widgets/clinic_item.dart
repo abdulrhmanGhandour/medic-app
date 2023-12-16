@@ -24,7 +24,7 @@ class ClinicsItem extends StatelessWidget {
       child: Stack(
         alignment: Alignment.bottomLeft,
         children: [
-          CustomItemImage(
+          CustomItemStakImage(
             clinics: clinics,
           ),
           Padding(

@@ -4,6 +4,7 @@ import 'package:medicapp/features/Authentication/presanteion/view/doctor_sing_up
 import 'package:medicapp/features/Authentication/presanteion/view/login_view.dart';
 import 'package:medicapp/features/Authentication/presanteion/view/sing_up_view.dart';
 import 'package:medicapp/features/clinics/presanteion/view/clinics_view.dart';
+import 'package:medicapp/features/doctor%20home/presanteion/view/doctor_home_view.dart';
 import 'package:medicapp/features/home/data/doctor_list.dart';
 import 'package:medicapp/features/home/presanteion/view/appoinment_doctor_view.dart';
 import 'package:medicapp/features/home/presanteion/view/home_view.dart';
@@ -20,6 +21,7 @@ abstract class AppRouter {
   static const kClinicsView = '/ClinicsView';
   static const kDoctorLoginView = '/DoctorLoginView';
   static const kDoctorSingUpView = '/DoctorSingUpView';
+  static const kDoctorHomeView = '/DoctorHomeView';
 
 
   static final router = GoRouter(
@@ -61,6 +63,10 @@ abstract class AppRouter {
        GoRoute(
         path: kDoctorSingUpView,
         builder: (context, state) => const DoctorSingUpView(),
+      ),
+        GoRoute(
+        path: kDoctorHomeView,
+        builder: (context, state) => const DoctorHomeView(),
       ),
     ],
   );

@@ -3,8 +3,8 @@ import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/widgets/box_shadow.dart';
 import 'package:medicapp/features/clinics/data/clinics_model.dart';
 
-class CustomItemImage extends StatelessWidget {
-  const CustomItemImage({
+class CustomItemStakImage extends StatelessWidget {
+  const CustomItemStakImage({
     super.key,
     required this.clinics,
   });

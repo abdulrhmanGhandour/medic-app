@@ -32,9 +32,14 @@ class DoctorHomeViewBody extends StatelessWidget {
                   },
                 ),
               
-                const DoctorHomeViewItem(
+                 DoctorHomeViewItem(
                   image: AssetsData.kDoctorSchedule,
                   text: 'Schedule',
+                  onTap: () {
+                     GoRouter.of(context).push(
+                      AppRouter.kDoctorScheduleView,
+                    );
+                  },
                 ),
               ],
             ),

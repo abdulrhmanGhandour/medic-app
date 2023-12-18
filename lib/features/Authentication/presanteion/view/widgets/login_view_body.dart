@@ -22,6 +22,7 @@ class LoginViewBody extends StatelessWidget {
     return BlocConsumer<AuthenticationCubit, AuthenticationState>(
       listener: (context, state) {
         if (state is LoginLoding) {
+          
         } else if (state is LoginSuccess) {
           showSnackBar(context, 'Success');
           GoRouter.of(context).push(AppRouter.kClinicsView);

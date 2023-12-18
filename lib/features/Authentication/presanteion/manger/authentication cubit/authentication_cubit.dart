@@ -12,7 +12,7 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
   Future<void> loginUser({required String email, required String password}) async {
     emit(LoginLoding());
     try {
-     final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
     email: email,
     password: password
   );
@@ -30,11 +30,12 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
 
 
 
+
   Future<void> registerUser({required String email, required String password}) async {
 
     emit(RegisterLoding());
     try {
-       final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
     email: email,
     password: password,
   );
@@ -48,5 +49,12 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
     } catch (e) {
       emit(RegisterFailuer(errMesage: 'Somting was woring'));
     }
+  }
+
+  @override
+  void onChange(Change<AuthenticationState> change) {
+    
+    super.onChange(change);
+    print(change);
   }
 }

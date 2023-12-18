@@ -1,10 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medicapp/core/utls/app_router.dart';
 import 'package:medicapp/core/utls/assets.dart';
 import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/widgets/custom_text_button.dart';
-import 'package:medicapp/features/Authentication/presanteion/view/widgets/custom_pass_text_feild.dart';
 import 'package:medicapp/features/Authentication/presanteion/view/widgets/custom_question_widget.dart';
 import 'package:medicapp/features/Authentication/presanteion/view/widgets/custom_text_feild.dart';
 
@@ -31,7 +31,12 @@ class DoctorLoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            const CustomPassTextFeild(),
+            const CustomTextFeild(
+              text: 'Password',
+              prefixIcon: Icon(Icons.lock),
+              obscureText: true,
+              suffixIcon: Icon(CupertinoIcons.eye_fill) ,
+            ),
             const SizedBox(
               height: 40,
             ),

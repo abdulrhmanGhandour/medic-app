@@ -1,55 +1,95 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:medicapp/core/utls/app_router.dart';
 import 'package:medicapp/core/utls/assets.dart';
 import 'package:medicapp/core/utls/colors.dart';
 import 'package:medicapp/core/utls/widgets/custom_text_button.dart';
-import 'package:medicapp/features/Authentication/presanteion/view/widgets/custom_pass_text_feild.dart';
+import 'package:medicapp/core/utls/widgets/show_snak_bar.dart';
+import 'package:medicapp/features/Authentication/presanteion/manger/authentication%20cubit/authentication_cubit.dart';
 import 'package:medicapp/features/Authentication/presanteion/view/widgets/custom_question_widget.dart';
 import 'package:medicapp/features/Authentication/presanteion/view/widgets/custom_text_feild.dart';
+
+GlobalKey<FormState> formKey = GlobalKey();
+String? password, email;
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image.asset(
-              AssetsData.kDoctorsImage,
+    return BlocConsumer<AuthenticationCubit, AuthenticationState>(
+      listener: (context, state) {
+        if (state is LoginLoding) {
+        } else if (state is LoginSuccess) {
+          showSnackBar(context, 'Success');
+          GoRouter.of(context).push(AppRouter.kClinicsView);
+        } else if (state is LoginFailure) {
+          showSnackBar(context, state.errMessage);
+        }
+      },
+      builder: (context, state) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+          child: Form(
+            key: formKey,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Image.asset(
+                    AssetsData.kDoctorsImage,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  CustomTextFeild(
+                    text: 'Enter Username',
+                    prefixIcon: const Icon(Icons.person),
+                    onChanged: (data) {
+                      email = data;
+                    },
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  CustomTextFeild(
+                    text: 'Password',
+                    prefixIcon: const Icon(Icons.lock),
+                    obscureText: true,
+                    suffixIcon: const Icon(CupertinoIcons.eye_fill),
+                    onChanged: (data) {
+                      password = data;
+                    },
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  CustomTextButton(
+                    text: 'Login',
+                    color: ColorData.kPrimaryColor,
+                    onTap: () {
+                      if (formKey.currentState!.validate()) {
+                        BlocProvider.of<AuthenticationCubit>(context).loginUser(
+                          email: email!,
+                          password: password!,
+                        );
+                      } else {}
+                    },
+                  ),
+                  CustomQuestionWidget(
+                    text: 'Dont have any account?',
+                    text2: 'Create Account',
+                    onPressed: () {
+                      GoRouter.of(context).push(AppRouter.kSingUpView);
+                    },
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            const CustomTextFeild(
-              text: 'Enter Username',
-              prefixIcon: Icon(Icons.person),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            const CustomPassTextFeild(),
-            const SizedBox(
-              height: 40,
-            ),
-          const  CustomTextButton(
-              text: 'Login',
-             
-              color: ColorData.kPrimaryColor,
-            ),
-             CustomQuestionWidget(
-              text: 'Dont have any account?',
-              text2: 'Create Account',
-              onPressed: () {
-                 GoRouter.of(context).push(AppRouter.kSingUpView);
-              },
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

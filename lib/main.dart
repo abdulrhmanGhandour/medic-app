@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'package:medicapp/core/utls/app_router.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:medicapp/features/Authentication/presanteion/manger/authentication%20cubit/authentication_cubit.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -17,12 +19,18 @@ class MedicApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      theme: ThemeData.light().copyWith(
-          //  textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
-          ),
-      routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner: false,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => AuthenticationCubit()),
+       
+      ],
+      child: MaterialApp.router(
+        theme: ThemeData.light().copyWith(
+            //  textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+            ),
+        routerConfig: AppRouter.router,
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }

@@ -7,11 +7,15 @@ part 'authentication_state.dart';
 class AuthenticationCubit extends Cubit<AuthenticationState> {
   AuthenticationCubit() : super(AuthenticationInitial());
 
-   Future<void> loginUser({required email, required password}) async {
+ 
+
+  Future<void> loginUser({required String email, required String password}) async {
     emit(LoginLoding());
     try {
-      await FirebaseAuth.instance
-          .signInWithEmailAndPassword(email: email, password: password);
+     final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+    email: email,
+    password: password
+  );
       emit(LoginSuccess());
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
@@ -24,11 +28,16 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
     }
   }
 
-  Future<void> registerUser({required email, required password}) async {
+
+
+  Future<void> registerUser({required String email, required String password}) async {
+
     emit(RegisterLoding());
     try {
-      await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: email!, password: password!);
+       final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+    email: email,
+    password: password,
+  );
       emit(RegisterSuccess());
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {

@@ -5,14 +5,15 @@ sealed class AuthenticationState {}
 
 final class AuthenticationInitial extends AuthenticationState {}
 
-class LoginSuccess extends AuthenticationState {}
-
 class LoginLoding extends AuthenticationState {}
+
+class LoginSuccess extends AuthenticationState {}
 
 class LoginFailure extends AuthenticationState {
  final String errMessage;
   LoginFailure({required this.errMessage});
 }
+
 
 class RegisterLoding extends AuthenticationState {}
 

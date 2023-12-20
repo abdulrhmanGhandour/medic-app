@@ -28,9 +28,6 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
     }
   }
 
-
-
-
   Future<void> registerUser({required String email, required String password}) async {
 
     emit(RegisterLoding());
